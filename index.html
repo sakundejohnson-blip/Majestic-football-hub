@@ -1,123 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<title>Majestic Football Hub</title>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909"><title>Majestic Football Hub</title>
 <style>
 :root{--gold:#e7bd55;--bg:#090909;--panel:#171717;--muted:#aaa;--line:#333}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-header{padding:28px 18px;text-align:center;background:linear-gradient(135deg,#17130a,#080808 65%);border-bottom:1px solid #55431b}
-.logo{font-size:clamp(25px,6vw,40px);font-weight:900;letter-spacing:1px;color:var(--gold);margin:0}
-header p{color:#ddd;margin:7px 0 0}.nav{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:13px;background:#111;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}
-.nav a,.btn{display:inline-block;text-decoration:none;color:#111;background:var(--gold);font-weight:bold;padding:9px 13px;border-radius:7px;font-size:14px}
-.nav a{background:#242424;color:#f3d98d;border:1px solid #51421f}
-main{max-width:1050px;margin:auto;padding:18px}
-section{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px;margin:17px 0}
-h2{color:var(--gold);margin:0 0 10px;font-size:22px}
-p{margin:7px 0}.muted,.note{color:var(--muted);font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.tile{background:#101010;border:1px solid #383838;border-radius:10px;padding:14px}
-.tile h3{margin:0 0 7px;color:#f2d68c;font-size:17px}
-.tile a{color:#f0cf76;font-weight:bold;text-decoration:none}.tile a:hover{text-decoration:underline}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-.pill{display:inline-block;border:1px solid #59491f;color:#f3d88d;padding:4px 8px;border-radius:20px;font-size:12px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f5f5;font-family:Arial,sans-serif;line-height:1.55}
+header{text-align:center;padding:28px 16px;background:linear-gradient(135deg,#17130a,#080808);border-bottom:1px solid #55431b}
+h1{color:var(--gold);font-size:clamp(26px,6vw,40px);margin:0;font-weight:900}header p{margin:7px 0;color:#ddd}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:12px;background:#111;border-bottom:1px solid #333}
+nav a{color:#f3d98d;background:#242424;border:1px solid #51421f;padding:8px 12px;border-radius:7px;text-decoration:none;font-weight:bold}
+main{max-width:1100px;margin:auto;padding:16px}section{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px;margin:16px 0}
+h2{color:var(--gold);margin:0 0 10px}p{margin:7px 0}.muted{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.tile{background:#101010;border:1px solid #383838;border-radius:10px;padding:14px}
+.tile h3{color:#f2d68c;margin:0 0 6px}.tile a{color:#f0cf76;font-weight:bold;text-decoration:none}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}.btn{background:var(--gold);color:#111;border:0;border-radius:7px;padding:10px 13px;font-weight:bold}
 input,select{width:100%;padding:11px;border-radius:7px;border:1px solid #555;background:#0d0d0d;color:white;margin:7px 0}
-table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:9px;border-bottom:1px solid #333;text-align:left}th{color:#f0d17e}
-footer{text-align:center;padding:25px;color:#999;border-top:1px solid var(--line)}
-</style>
-</head>
-<body>
-<header>
-  <h1 class="logo">MAJESTIC FOOTBALL HUB</h1>
-  <p>Your home for football scores, fixtures, tables and news</p>
-  <span class="pill">Football information • No betting</span>
-</header>
-<nav class="nav">
-  <a href="#scores">Scores</a><a href="#fixtures">Fixtures</a><a href="#tables">Tables</a>
-  <a href="#news">News</a><a href="#teams">Teams</a><a href="#search">Search</a>
-</nav>
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:11px;margin-top:14px}
+.team{background:#101010;border:1px solid #393939;border-radius:11px;padding:13px 8px;text-align:center;min-height:150px}
+.crest{width:68px;height:78px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center;clip-path:polygon(8% 0,92% 0,88% 68%,50% 100%,12% 68%);background:linear-gradient(145deg,#f1d27b,#8b641b);color:#17120a;font-size:17px;font-weight:900;border:2px solid #fff}
+.team strong{display:block;font-size:13px}.team small{color:#aaa;font-size:11px}
+.pill{display:inline-block;color:#f3d88d;border:1px solid #59491f;padding:3px 8px;border-radius:20px;font-size:12px}
+footer{text-align:center;padding:24px;color:#999;border-top:1px solid #333}
+</style></head><body>
+<header><h1>MAJESTIC FOOTBALL HUB</h1><p>Your home for football scores, fixtures, tables and news</p><span class="pill">Football information • No betting</span></header>
+<nav><a href="#scores">Scores</a><a href="#fixtures">Fixtures</a><a href="#tables">Tables</a><a href="#news">News</a><a href="#clubs">Club Badges</a><a href="#search">Search</a></nav>
 <main>
-<section id="scores">
-<h2>Match Scores</h2>
-<p>For current scores, use the official competition and sports pages below. This website does not yet receive a live score feed, so it will not invent or label sample scores as live.</p>
-<div class="grid">
- <div class="tile"><h3>Ghana Premier League</h3><p class="muted">Official results, match highlights and competition updates.</p><a href="https://gpl.com.gh/" target="_blank" rel="noopener">View Ghana Premier League ↗</a></div>
- <div class="tile"><h3>Premier League</h3><p class="muted">Latest match scores and fixtures.</p><a href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener">View Premier League fixtures ↗</a></div>
- <div class="tile"><h3>UEFA Champions League</h3><p class="muted">Official competition news and match centre.</p><a href="https://www.uefa.com/uefachampionsleague/" target="_blank" rel="noopener">Visit UEFA ↗</a></div>
-</div>
-</section>
-<section id="fixtures">
-<h2>Fixtures</h2>
-<p>Choose a competition to see its latest published schedule. Kick-off times and fixtures can change, so check the official page before a match.</p>
-<div class="grid">
- <div class="tile"><h3>Ghana Premier League</h3><a href="https://gpl.com.gh/fixtures" target="_blank" rel="noopener">View GPL fixtures ↗</a></div>
- <div class="tile"><h3>English Premier League</h3><a href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener">View EPL fixtures ↗</a></div>
- <div class="tile"><h3>La Liga</h3><a href="https://www.laliga.com/en-GB/laliga-easports/fixtures" target="_blank" rel="noopener">View La Liga fixtures ↗</a></div>
-</div>
-</section>
-<section id="tables">
-<h2>League Tables</h2>
-<p>Open official standings for the latest verified table. Tables are maintained by each competition and may update after matches.</p>
-<div class="grid">
- <div class="tile"><h3>Ghana Premier League</h3><a href="https://gpl.com.gh/" target="_blank" rel="noopener">Official GPL standings ↗</a></div>
- <div class="tile"><h3>English Premier League</h3><a href="https://www.premierleague.com/tables" target="_blank" rel="noopener">Official EPL table ↗</a></div>
- <div class="tile"><h3>La Liga</h3><a href="https://www.laliga.com/en-GB/laliga-easports/standing" target="_blank" rel="noopener">Official La Liga table ↗</a></div>
-</div>
-</section>
-<section id="news">
-<h2>Football News</h2>
-<p>Read the latest stories directly from established football news sources.</p>
-<div class="grid">
- <div class="tile"><h3>Ghana Football</h3><a href="https://www.ghanafa.org/" target="_blank" rel="noopener">Ghana Football Association ↗</a></div>
- <div class="tile"><h3>Sky Sports Football</h3><a href="https://www.skysports.com/football" target="_blank" rel="noopener">Latest football news ↗</a></div>
- <div class="tile"><h3>BBC Sport Football</h3><a href="https://www.bbc.com/sport/football" target="_blank" rel="noopener">Football headlines ↗</a></div>
- <div class="tile"><h3>Reuters Football</h3><a href="https://www.reuters.com/world/football/" target="_blank" rel="noopener">International football reports ↗</a></div>
-</div>
-</section>
-<section id="teams">
-<h2>Teams & Competitions</h2>
-<p>Explore club information from official competition websites.</p>
-<div class="grid">
- <div class="tile"><h3>Ghana Premier League clubs</h3><a href="https://gpl.com.gh/" target="_blank" rel="noopener">Explore Ghana clubs ↗</a></div>
- <div class="tile"><h3>Premier League clubs</h3><a href="https://www.premierleague.com/clubs" target="_blank" rel="noopener">Explore EPL clubs ↗</a></div>
- <div class="tile"><h3>UEFA clubs</h3><a href="https://www.uefa.com/" target="_blank" rel="noopener">Explore UEFA competitions ↗</a></div>
-</div>
-</section>
-<section id="search">
-<h2>Search the Hub</h2>
-<p class="muted">Search the competition links on this page.</p>
-<input id="searchBox" type="search" placeholder="Search e.g. Ghana, Premier League, La Liga" aria-label="Search competitions">
-<div id="searchResults" class="grid"></div>
-</section>
-<section>
-<h2>Favourite Teams</h2>
-<p>Keep a simple list of teams you follow on this device.</p>
-<input id="teamInput" placeholder="Enter a team name">
-<div class="actions"><button class="btn" id="addTeam">Add favourite</button></div>
-<ul id="favourites"></ul>
-<p class="note">Your favourites are saved only in this browser on this device.</p>
-</section>
-<section>
-<h2>About live updates</h2>
-<p>This version uses links to official sources for current scores, fixtures, tables and news. It does not automatically import live match data into this page. A future live-data connection would need a suitable data provider and secure server-side setup.</p>
-</section>
-</main>
-<footer>© 2026 Majestic Football Hub · Built for football fans</footer>
+<section id="scores"><h2>Match Scores</h2><p>For verified current scores, visit official competition pages. This page does not yet have an automatic live-score feed.</p>
+<div class="grid"><div class="tile"><h3>Ghana Premier League</h3><a href="https://gpl.com.gh/" target="_blank" rel="noopener">Official scores and results ↗</a></div>
+<div class="tile"><h3>English Premier League</h3><a href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener">Fixtures and results ↗</a></div>
+<div class="tile"><h3>UEFA Champions League</h3><a href="https://www.uefa.com/uefachampionsleague/" target="_blank" rel="noopener">Official match centre ↗</a></div></div></section>
+<section id="fixtures"><h2>Fixtures</h2><div class="grid">
+<div class="tile"><h3>Ghana Premier League</h3><a href="https://gpl.com.gh/" target="_blank" rel="noopener">View fixtures ↗</a></div>
+<div class="tile"><h3>Premier League</h3><a href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener">View fixtures ↗</a></div>
+<div class="tile"><h3>La Liga</h3><a href="https://www.laliga.com/en-GB/laliga-easports/fixtures" target="_blank" rel="noopener">View fixtures ↗</a></div></div></section>
+<section id="tables"><h2>League Tables</h2><div class="grid">
+<div class="tile"><h3>Ghana Premier League</h3><a href="https://gpl.com.gh/" target="_blank" rel="noopener">Official standings ↗</a></div>
+<div class="tile"><h3>Premier League</h3><a href="https://www.premierleague.com/tables" target="_blank" rel="noopener">Official table ↗</a></div>
+<div class="tile"><h3>La Liga</h3><a href="https://www.laliga.com/en-GB/laliga-easports/standing" target="_blank" rel="noopener">Official table ↗</a></div></div></section>
+<section id="news"><h2>Football News</h2><div class="grid">
+<div class="tile"><h3>Ghana Football Association</h3><a href="https://www.ghanafa.org/" target="_blank" rel="noopener">Ghana football news ↗</a></div>
+<div class="tile"><h3>BBC Sport</h3><a href="https://www.bbc.com/sport/football" target="_blank" rel="noopener">Football headlines ↗</a></div>
+<div class="tile"><h3>Sky Sports</h3><a href="https://www.skysports.com/football" target="_blank" rel="noopener">Latest football news ↗</a></div></div></section>
+<section id="clubs"><h2>Club Badges & Teams</h2><p class="muted">Browse Ghana Premier League clubs, English Premier League clubs and selected major European clubs. These are custom initials badges, not official club crests.</p>
+<label for="leagueFilter">Choose a group</label><select id="leagueFilter"><option value="All">All clubs</option><option>Ghana Premier League</option><option>English Premier League</option><option>European Clubs</option></select>
+<div id="teamGrid" class="team-grid"></div></section>
+<section id="search"><h2>Search Teams</h2><input id="searchBox" placeholder="Search for a club..." aria-label="Search clubs"><div id="searchResults" class="team-grid"></div></section>
+<section><h2>Favourite Teams</h2><input id="teamInput" placeholder="Enter a team name"><div class="actions"><button class="btn" id="addTeam">Add favourite</button></div><ul id="favourites"></ul><p class="muted">Favourites are saved in this browser on this device.</p></section>
+<section><h2>About team badges and live data</h2><p>These decorative initials badges help identify clubs but are not official logos. Current scores, fixtures and tables are linked to official sources. Automatic live data would need a suitable data provider and secure setup.</p></section>
+</main><footer>© 2026 Majestic Football Hub · Built for football fans</footer>
 <script>
-const searchable=[...document.querySelectorAll('#scores .tile,#fixtures .tile,#tables .tile,#news .tile,#teams .tile')];
-const box=document.getElementById('searchBox'), results=document.getElementById('searchResults');
-function search(){const q=box.value.trim().toLowerCase();results.innerHTML='';if(!q)return;
- searchable.filter(x=>x.innerText.toLowerCase().includes(q)).forEach(x=>{const c=x.cloneNode(true);results.appendChild(c);});
- if(!results.children.length)results.textContent='No matching section found.';}
-box.addEventListener('input',search);
-const input=document.getElementById('teamInput'), list=document.getElementById('favourites');
-let teams=[];try{teams=JSON.parse(localStorage.getItem('majesticTeams')||'[]')}catch(e){}
-function render(){list.innerHTML='';teams.forEach((t,i)=>{const li=document.createElement('li');li.textContent=t+' ';const b=document.createElement('button');b.textContent='Remove';b.onclick=()=>{teams.splice(i,1);save()};li.appendChild(b);list.appendChild(li)})}
-function save(){localStorage.setItem('majesticTeams',JSON.stringify(teams));render()}
-document.getElementById('addTeam').onclick=()=>{const t=input.value.trim();if(t&&!teams.some(x=>x.toLowerCase()===t.toLowerCase())){teams.push(t);save();input.value=''}};
-render();
-</script>
-</body>
-</html>
+const teams = [{"league": "Ghana Premier League", "name": "Aduana Stars", "initials": "AS"}, {"league": "Ghana Premier League", "name": "Asante Kotoko", "initials": "AK"}, {"league": "Ghana Premier League", "name": "Basake Holy Stars", "initials": "BH"}, {"league": "Ghana Premier League", "name": "Bechem United", "initials": "BU"}, {"league": "Ghana Premier League", "name": "Berekum Chelsea", "initials": "BC"}, {"league": "Ghana Premier League", "name": "Bibiani Gold Stars", "initials": "BG"}, {"league": "Ghana Premier League", "name": "Debibi United", "initials": "DU"}, {"league": "Ghana Premier League", "name": "Dreams FC", "initials": "DF"}, {"league": "Ghana Premier League", "name": "FC Ashantigold", "initials": "FA"}, {"league": "Ghana Premier League", "name": "Heart of Lions", "initials": "HL"}, {"league": "Ghana Premier League", "name": "Hearts of Oak", "initials": "HO"}, {"league": "Ghana Premier League", "name": "Karela United", "initials": "KU"}, {"league": "Ghana Premier League", "name": "Medeama SC", "initials": "MS"}, {"league": "Ghana Premier League", "name": "Port City FC", "initials": "PC"}, {"league": "Ghana Premier League", "name": "Samartex FC", "initials": "SF"}, {"league": "Ghana Premier League", "name": "Swedru All Blacks", "initials": "SA"}, {"league": "Ghana Premier League", "name": "Vision FC", "initials": "VF"}, {"league": "Ghana Premier League", "name": "Young Apostles", "initials": "YA"}, {"league": "English Premier League", "name": "Arsenal", "initials": "ARS"}, {"league": "English Premier League", "name": "Aston Villa", "initials": "AVL"}, {"league": "English Premier League", "name": "Bournemouth", "initials": "BOU"}, {"league": "English Premier League", "name": "Brentford", "initials": "BRE"}, {"league": "English Premier League", "name": "Brighton & Hove Albion", "initials": "BHA"}, {"league": "English Premier League", "name": "Chelsea", "initials": "CHE"}, {"league": "English Premier League", "name": "Coventry City", "initials": "COV"}, {"league": "English Premier League", "name": "Crystal Palace", "initials": "CRY"}, {"league": "English Premier League", "name": "Everton", "initials": "EVE"}, {"league": "English Premier League", "name": "Fulham", "initials": "FUL"}, {"league": "English Premier League", "name": "Hull City", "initials": "HUL"}, {"league": "English Premier League", "name": "Ipswich Town", "initials": "IPS"}, {"league": "English Premier League", "name": "Leeds United", "initials": "LEE"}, {"league": "English Premier League", "name": "Liverpool", "initials": "LIV"}, {"league": "English Premier League", "name": "Manchester City", "initials": "MCI"}, {"league": "English Premier League", "name": "Manchester United", "initials": "MUN"}, {"league": "English Premier League", "name": "Newcastle United", "initials": "NEW"}, {"league": "English Premier League", "name": "Nottingham Forest", "initials": "NFO"}, {"league": "English Premier League", "name": "Sunderland", "initials": "SUN"}, {"league": "English Premier League", "name": "Tottenham Hotspur", "initials": "TOT"}, {"league": "European Clubs", "name": "Real Madrid", "initials": "RMA"}, {"league": "European Clubs", "name": "Barcelona", "initials": "BAR"}, {"league": "European Clubs", "name": "Atlético Madrid", "initials": "ATM"}, {"league": "European Clubs", "name": "Bayern Munich", "initials": "BAY"}, {"league": "European Clubs", "name": "Borussia Dortmund", "initials": "BVB"}, {"league": "European Clubs", "name": "Paris Saint-Germain", "initials": "PSG"}, {"league": "European Clubs", "name": "Juventus", "initials": "JUV"}, {"league": "European Clubs", "name": "AC Milan", "initials": "MIL"}, {"league": "European Clubs", "name": "Inter Milan", "initials": "INT"}, {"league": "European Clubs", "name": "Ajax", "initials": "AJA"}, {"league": "European Clubs", "name": "Benfica", "initials": "BEN"}, {"league": "European Clubs", "name": "FC Porto", "initials": "POR"}];
+const grid=document.getElementById('teamGrid'),filter=document.getElementById('leagueFilter');
+function draw(list,target){target.innerHTML='';list.forEach(t=>{const card=document.createElement('div');card.className='team';const crest=document.createElement('div');crest.className='crest';crest.textContent=t.initials;const name=document.createElement('strong');name.textContent=t.name;const league=document.createElement('small');league.textContent=t.league;card.append(crest,name,league);target.append(card)})}
+function filtered(){const group=filter.value;draw(teams.filter(t=>group==='All'||t.league===group),grid)}
+filter.addEventListener('change',filtered);filtered();
+const search=document.getElementById('searchBox'),results=document.getElementById('searchResults');
+search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();draw(teams.filter(t=>t.name.toLowerCase().includes(q)||t.league.toLowerCase().includes(q)),results)});
+const input=document.getElementById('teamInput'),list=document.getElementById('favourites');let fav=[];try{fav=JSON.parse(localStorage.getItem('majesticTeams')||'[]')}catch(e){}
+function render(){list.innerHTML='';fav.forEach((x,i)=>{const li=document.createElement('li');li.textContent=x+' ';const b=document.createElement('button');b.textContent='Remove';b.onclick=()=>{fav.splice(i,1);save()};li.append(b);list.append(li)})}
+function save(){localStorage.setItem('majesticTeams',JSON.stringify(fav));render()}
+document.getElementById('addTeam').onclick=()=>{let x=input.value.trim();if(x&&!fav.includes(x)){fav.push(x);save();input.value=''}};render();
+</script></body></html>
